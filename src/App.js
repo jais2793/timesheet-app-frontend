@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<PrivateRouter ><Home /></PrivateRouter>}></Route>
         <Route path="/addtimesheet" element={<PrivateRouter ><AddTimesheet /></PrivateRouter>}></Route>
         <Route path="/ratetimesheet/:id" element={<PrivateRouter ><RateTimesheet /></PrivateRouter>}></Route>
-        <Route path="*" component={NotFound}></Route>
+        <Route path="*" element={<NotFound/>}></Route>
 
       </Routes>
     </>
