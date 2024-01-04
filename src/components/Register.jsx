@@ -12,7 +12,7 @@ const Register = () => {
     const [username, setUserName] = useState('');
     const [userpass, setUserpass] = useState('');
     const [userType, setUserType] = useState(0);
-    const [managerId, setManagerId] = useState('');
+    const [managerId, setManagerId] = useState('admin');
     const [incorrectRegister, setIncorrectRegister] = useState(false);
     const [incorrectMsg, setIncorrectMsg] = useState('');
 
@@ -97,7 +97,7 @@ const Register = () => {
                                 setUserType(parseInt(e.target.value))
                             }}
                         >
-                            <option disabled>Choose a user type</option>
+                            <option value="null" disabled>Choose a user type</option>
                             <option
                                 value="0"
                             >
@@ -119,7 +119,7 @@ const Register = () => {
                                 setManagerId(res.target.value);
                             }}
                         >
-                            <option disabled>Choose a manager</option>
+                            <option value="null" disabled>Choose a manager</option>
                             {managers.map((manager) => (
                                 <option
                                     className="text-base border-0 outline-none capitalize bg-white text-black"
